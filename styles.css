@@ -1,8 +1,10 @@
+* {
+    background-color:lightgray;
+}
 table, th, td {
     border: 1px solid;
     border-collapse: collapse;
     background-color: rgba(203,195,227, 0.5);
-    
   }
 
 #table1 {
