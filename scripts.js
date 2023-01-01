@@ -23,22 +23,58 @@ dailyCheckboxes.forEach((daily)=>{
     document.querySelector("#root").appendChild(label);
 });
 
-/*const btn = document.querySelector('#btn');
+/*
+const btn = document.querySelector('#btn');
 btn.addEventListener('click', (event) => {
     let checkboxCounter = document.querySelectorAll('input[name="dailyCheck"]:checked');
-    let valCheckCount = [];
+    let valCheckCount = 0;
     checkboxCounter.forEach((checkbox) => {
-        valCheckCount.push(checkbox.value);
+        valCheckCount++;
+        return valCheckCount;
     });
     alert(valCheckCount);
 });
 */
-document.getElementById('#btn').onclick = function () {
-    var checkboxes = document.querySelectorAll('input[name="dailyCheck"]:checked');
-    alert(checkboxes.length);
-}
+let valCheckCount = 0;
+document.querySelectorAll('input[name="dailyCheck"]').addEventListener("change", function () {
+    valCheckCount == this.checked;
+}, false);
 
-let number = document.getElementById("number");
+let circularProgress = document.querySelector(".circular-progress"),
+    progressValue = document.querySelector(".progress-value");
+
+let progressStartValue = 0,
+    progressEndValue = valCheckCount,
+    speed = 20;
+
+let progress = setInterval(() => {
+    progressStartValue++;
+
+    progressValue.textContent = `${progressStartValue}%`
+    circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+
+    if(progressStartValue == progressEndValue) {
+        clearInterval(progress);
+    }
+}, speed)
+/*
+btn.addEventListener('onClick', (event) => {
+    let number = valCheckCount;
+    let counter = 0;
+    setInterval(() => {
+        if (counter == valCheckCount) {
+            clearInterval;
+        } else {
+            counter++;
+            number.innerHTML = counter + "%";
+        }
+    }, 30);
+});
+
+*/
+
+
+/*let number = document.getElementById("number");
 let counter = 0;
 
 setInterval(() => {
@@ -49,3 +85,4 @@ setInterval(() => {
         number.innerHTML = counter + "%";
     }
 }, 30);
+*/
