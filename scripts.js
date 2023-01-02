@@ -14,6 +14,7 @@ dailyCheckboxes.forEach((daily)=>{
     checkbox.name = "dailyCheck";
     checkbox.value = daily;
     checkbox.id = id;
+    
 
     // place the checkbox inside a label
     label.appendChild(checkbox);
@@ -23,22 +24,21 @@ dailyCheckboxes.forEach((daily)=>{
     document.querySelector("#root").appendChild(label);
 });
 
-/*
-const btn = document.querySelector('#btn');
-btn.addEventListener('click', (event) => {
+var valCheckCount = 0;
+function update() {
+    
     let checkboxCounter = document.querySelectorAll('input[name="dailyCheck"]:checked');
-    let valCheckCount = 0;
-    checkboxCounter.forEach((checkbox) => {
-        valCheckCount++;
-        return valCheckCount;
+    valCheckCount = checkboxCounter.length;
+    return valCheckCount;
+};
+
+let checkboxCounter = document.querySelectorAll('input[name="dailyCheck"]');
+checkboxCounter.forEach(function(checkboxD) {
+    checkboxD.addEventListener("change", function(e) {
+       update();
     });
-    alert(valCheckCount);
 });
-*/
-let valCheckCount = 0;
-document.querySelectorAll('input[name="dailyCheck"]').addEventListener("change", function () {
-    valCheckCount == this.checked;
-}, false);
+    
 
 let circularProgress = document.querySelector(".circular-progress"),
     progressValue = document.querySelector(".progress-value");
@@ -49,40 +49,12 @@ let progressStartValue = 0,
 
 let progress = setInterval(() => {
     progressStartValue++;
+let percentageAnswer = Math.round((valCheckCount / 456) * 100);
 
-    progressValue.textContent = `${progressStartValue}%`
-    circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+    progressValue.textContent = `${percentageAnswer}%`
+    circularProgress.style.background = `conic-gradient(#7d2ae8 ${percentageAnswer * 3.6}deg, #ededed 0deg)`
 
-    if(progressStartValue == progressEndValue) {
+    if(progressStartValue == percentageAnswer) {
         clearInterval(progress);
     }
-}, speed)
-/*
-btn.addEventListener('onClick', (event) => {
-    let number = valCheckCount;
-    let counter = 0;
-    setInterval(() => {
-        if (counter == valCheckCount) {
-            clearInterval;
-        } else {
-            counter++;
-            number.innerHTML = counter + "%";
-        }
-    }, 30);
-});
-
-*/
-
-
-/*let number = document.getElementById("number");
-let counter = 0;
-
-setInterval(() => {
-    if (counter == valCheckCount) {
-        clearInterval;
-    } else {
-        counter += 1;
-        number.innerHTML = counter + "%";
-    }
-}, 30);
-*/
+}, speed);
