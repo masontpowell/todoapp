@@ -1,3 +1,5 @@
+
+// CREATING ALL OF THE DAILY CHECKBOXES
 const dailyCheckboxes = Array.from({length: 456}, (x, i) => i);
 
 dailyCheckboxes.forEach((daily)=>{
@@ -24,6 +26,9 @@ dailyCheckboxes.forEach((daily)=>{
     document.querySelector("#root").appendChild(label);
 });
 
+
+//CHECKING IF THE CHECKBOXES HAVE BEEN CHECKED OR UNCHECKED AND THEN RETURNING THE NUMBER
+//AS VALCHECKCOUNT
 var valCheckCount = 0;
 function update() {
     
@@ -39,7 +44,8 @@ checkboxCounter.forEach(function(checkboxD) {
     });
 });
     
-
+//ALL OF THE CODE USED TO CREATE THE CIRCULAR PROGRESS BAR AND TAKES THE INPUT FROM
+//VALCHECKCOUNT AND THE FUNCTION ABOVE.
 let circularProgress = document.querySelector(".circular-progress"),
     progressValue = document.querySelector(".progress-value");
 
@@ -58,3 +64,19 @@ let percentageAnswer = Math.round((valCheckCount / 456) * 100);
         clearInterval(progress);
     }
 }, speed);
+
+function addRowFunction() {
+    var table = document.getElementById("table1");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell1 = document.createElement("input");
+    cell1.type = "text";
+    cell1.name = "taskName";
+    cell1.value = "incomplete";
+    cell1.id = "task1";
+
+
+    cell2.innerHTML = "new row2";
+}
