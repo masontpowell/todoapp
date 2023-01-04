@@ -8,323 +8,60 @@
             <script defer src="scripts.js"></script>
         </head>
         <body>
-            <h1>Allyson's Anal Analysis</h1>
+            <div class="header">
+                <h1>Task Manager</h1>
+            </div>
+            <h2>Daily Tasks</h2>
+            <!--Creating table format for Dialy Tasks-->
+            <div id="dailyTable">
+                <table id="table1" class="dailyT">     
+                    <!--first table header for title and days-->
+                    <thead>
+                        <tr class="unit-table">
+                            <th>Daily Tasks</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                            <th>19</th>
+                            <th>20</th>
+                            <th>21</th>
+                            <th>22</th>
+                            <th>23</th>
+                            <th>24</th>
+                            <th>25</th>
+                            <th>26</th>
+                            <th>27</th>
+                            <th>28</th>
+                            <th>29</th>
+                            <th>30</th>
+                            <th>31</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table1Body">
+
+                    </tbody>
+                </table>
+                <br>
+                <button type="button"  id= "addRowButton" onClick="addRowFunction()">+</button> 
+            </div>
             <!--Table for Weekly Habits-->
             <h2>Weekly Habits</h2>
-            <div class="weeklyHabitTable">
-                <table id="table2">
-                    <form id="table2">
-                        <!--First row of weekly habits (headers)-->
-                        <tr id="table2">
-                            <td>Weekly Habits</td>
-                            <td>Week 1</td>
-                            <td>Week 2</td>
-                            <td>Week 3</td>
-                            <td>Week 4</td>
-                        </tr>
-                        <!--Second row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--Third Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--4th Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--5th Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--6th Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--7th Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--8th Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--9th Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--10th Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                        <!--11th Row-->
-                        <tr id="table2">
-                            <td>
-                                <input type="text">
-                            </td>
-                            <!--Week 1 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 2 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 3 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                            <!--Week 4 inputs-->
-                            <td>
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                                <input type="text">
-                                <label for="c4"><input type="checkbox" name="dailyCheck" id="c4"></label>
-                            </td>
-                        </tr>
-                    </form>
-                </table>
-            </div>
+            
             <!--Circular Progress Tracker for Daily habits-->
             <div class="container">
                 <div class="circular-progress">
@@ -332,119 +69,7 @@
                 </div>
                 <span class="text">Daily Habits</span>
             </div>
-            <div id="root">
-               
-                
-            </div>
-            <div id="dailyTable">
-                <table id="table1">
-                    <form >
-                    <!--first table header for title and days-->
-                        <tr >
-                            <td>
-                                <label for="firstRow">Daily Habits</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">1</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">2</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">3</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">4</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">5</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">6</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">7</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">8</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">9</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">10</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">11</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">12</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">13</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">14</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">15</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">16</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">17</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">18</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">19</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">20</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">21</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">22</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">23</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">24</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">25</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">26</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">27</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">28</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">29</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">30</label>
-                            </td>
-                            <td>
-                                <label for="firstRow">31</label>
-                            </td>
-                        </tr>
-                    </form>
-                </table>
-                <br>
-                
-                <button type="button" onClick="addRowFunction()">+</button>
-                 
-            </div>
+ 
         </body>
     </html>
 </DOCTYPE>
