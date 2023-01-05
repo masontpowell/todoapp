@@ -2,7 +2,6 @@
 //AS VALCHECKCOUNT
 var valCheckCount = 0;
 function update() {
-    
     let checkboxCounter = document.querySelectorAll('input[name="dailyCheck"]:checked');
     valCheckCount = checkboxCounter.length;
     return valCheckCount;
@@ -75,7 +74,9 @@ let percentageAnswer = Math.round((valCheckCount / progressLength) * 100);
 
 
 //Start of Weekly Table JS
+//------------------------------------------------------------------------\\
 
+//The add row button for the weekly table
 function addRowWeekly() {
     var parentTable = document.getElementById("table2Weekly");
     var myTd,myInputCheckWeekly,myInputTextWeekly,myLabelText,myDateWeekly;
@@ -98,8 +99,8 @@ function addRowWeekly() {
     for (var i = 0; i < 4; i++) {
         myTd = document.createElement('td');
         myDateWeekly = document.createElement('input');
-        myDateWeekly = setAttribute('type', 'date');
-        myDateWeekly = setAttribute('name', 'weekly-date');
+        myDateWeekly.setAttribute('type', 'date');
+        myDateWeekly.setAttribute('name', 'date-Weekly');
         myInputCheckWeekly = document.createElement('input');
         myInputCheckWeekly.setAttribute('type','checkbox');
         myInputCheckWeekly.setAttribute('name' , 'weeklyCheck');
@@ -112,3 +113,40 @@ function addRowWeekly() {
     }
     parentTable.appendChild(myTr);
 }
+
+//the update function to count the number of check for weekly tasks.
+var checkCountWeekly = 0;
+function updateWeekly() {
+    let checkboxCountWeekly = document.querySelectorAll('input[name="weeklyCheck"]:checked');
+    checkCountWeekly = checkboxCountWeekly.length;
+    return checkCountWeekly;
+};
+
+let checkboxCountWeekly = document.querySelectorAll('input[name="weeklyCheck"]');
+checkboxCountWeekly.forEach(function(checkboxW) {
+    checkboxW.addEventListener("change", function(d) {
+       updateWeekly();
+    });
+});
+
+//Weekly circular progress 
+let circularProgressWeekly = document.querySelector(".circular-progress-weekly"),
+    progressValueWeekly = document.querySelector(".progress-value-weekly");
+
+
+let progressStartValueWeekly = 0,
+    progressEndValueWeekly = checkCountWeekly,
+    speedWeekly = 20;
+
+let progressWeekly = setInterval(() => {
+let progressLengthWeekly = document.querySelectorAll('input[name="weeklyCheck"]').length;
+    progressStartValueWeekly++;
+let percentageAnswerWeekly = Math.round((checkCountWeekly / progressLengthWeekly) * 100);
+
+    progressValueWeekly.textContent = `${percentageAnswerWeekly}%`
+    circularProgressWeekly.style.background = `conic-gradient(#7d2ae8 ${percentageAnswerWeekly * 3.6}deg, #ededed 0deg)`
+
+    if(progressStartValueWeekly == percentageAnswerWeekly) {
+        clearInterval(progressWeekly);
+    }
+}, speedWeekly);
