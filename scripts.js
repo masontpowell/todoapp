@@ -105,7 +105,7 @@ function addRowWeekly() {
         myInputCheckWeekly.setAttribute('type','checkbox');
         myInputCheckWeekly.setAttribute('name' , 'weeklyCheck');
         myInputCheckWeekly.addEventListener('change', function(e) {
-            update();
+            updateWeekly();
         });
         myTd.appendChild(myDateWeekly);
         myTd.appendChild(myInputCheckWeekly);
