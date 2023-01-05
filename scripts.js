@@ -50,8 +50,6 @@ function addRowFunction() {
     parentTable.appendChild(myTr);
 }
 
-
-
 //ALL OF THE CODE USED TO CREATE THE CIRCULAR PROGRESS BAR AND TAKES THE INPUT FROM
 //VALCHECKCOUNT AND THE FUNCTION ABOVE.
 let circularProgress = document.querySelector(".circular-progress"),
@@ -74,3 +72,43 @@ let percentageAnswer = Math.round((valCheckCount / progressLength) * 100);
         clearInterval(progress);
     }
 }, speed);
+
+
+//Start of Weekly Table JS
+
+function addRowWeekly() {
+    var parentTable = document.getElementById("table2Weekly");
+    var myTd,myInputCheckWeekly,myInputTextWeekly,myLabelText,myDateWeekly;
+    var myTr = document.createElement('tr');
+    myTr.setAttribute('class' , 'weekly-table');
+    for (var j =0; j < 1; j++) {
+        myLabelText = document.createElement('label');
+        myLabelText.setAttribute('class', 'form__label');
+        myLabelText.setAttribute('for', 'task');
+        myLabelText.innerHTML = "Task";
+        myTd = document.createElement('td');
+        myInputTextWeekly = document.createElement('input');
+        myInputTextWeekly.setAttribute('type','text');
+        myInputTextWeekly.setAttribute('class', 'form__field');
+        myInputTextWeekly.setAttribute('placeholder', 'task');
+        myTd.appendChild(myInputTextWeekly);
+        myTd.appendChild(myLabelText);
+        myTr.appendChild(myTd);
+    }
+    for (var i = 0; i < 4; i++) {
+        myTd = document.createElement('td');
+        myDateWeekly = document.createElement('input');
+        myDateWeekly = setAttribute('type', 'date');
+        myDateWeekly = setAttribute('name', 'weekly-date');
+        myInputCheckWeekly = document.createElement('input');
+        myInputCheckWeekly.setAttribute('type','checkbox');
+        myInputCheckWeekly.setAttribute('name' , 'weeklyCheck');
+        myInputCheckWeekly.addEventListener('change', function(e) {
+            update();
+        });
+        myTd.appendChild(myDateWeekly);
+        myTd.appendChild(myInputCheckWeekly);
+        myTr.appendChild(myTd);
+    }
+    parentTable.appendChild(myTr);
+}
