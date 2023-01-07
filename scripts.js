@@ -18,7 +18,7 @@ checkboxCounter.forEach(function(checkboxD) {
 //function to add a new row of inputs when the + is clicked.
 function addRowFunction() {
     var parentTable = document.getElementById("table1Body");
-    var myTd,myInputCheck,myInputText,myLabelText;
+    var myTd,myInputCheck,myInputText,myLabelText,myLabelCheckDaily, myDivTickDaily;
     var myTr = document.createElement('tr');
     myTr.setAttribute('class' , 'unit-table');
     for (var j =0; j < 1; j++) {
@@ -36,13 +36,21 @@ function addRowFunction() {
         myTr.appendChild(myTd);
     }
     for (var i = 0; i < 31; i++) {
+        myDivTickDaily = document.createElement('div');
+        myDivTickDaily.setAttribute('id', 'tick_mark')
+        myLabelCheckDaily = document.createElement('label');
+        myLabelCheckDaily.setAttribute('for', '_checkbox');
+        myLabelCheckDaily.setAttribute('id', 'dialyLabelCheck');
         myTd = document.createElement('td');
         myInputCheck = document.createElement('input');
+        myInputCheck.setAttribute('id', '_checkbox')
         myInputCheck.setAttribute('type','checkbox');
         myInputCheck.setAttribute('name' , 'dailyCheck');
         myInputCheck.addEventListener('change', function(e) {
             update();
         });
+        myLabelCheckDaily.appendChild(myDivTickDaily);
+        myTd.appendChild(myLabelCheckDaily)
         myTd.appendChild(myInputCheck);
         myTr.appendChild(myTd);
     }
@@ -150,3 +158,21 @@ let percentageAnswerWeekly = Math.round((checkCountWeekly / progressLengthWeekly
         clearInterval(progressWeekly);
     }
 }, speedWeekly);
+
+//Sidebar 
+
+let arrow = document.querySelectorAll(".arrow");
+
+for(var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e) => {
+    let arrowParent =  e.target.parentElement.parentElement;
+    arrowParent.classList.toggle("showMenu");
+    });
+}
+
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".bx-menu");
+
+sidebarBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+});
