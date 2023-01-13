@@ -56,12 +56,12 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./calendar.html">
                             <i class='bx bxs-pie-chart-alt'></i>
-                            <span class="link_name">Analytics</span>
+                            <span class="link_name">calendar</span>
                         </a>
                         <ul class="sub-menu blank">
-                            <li><a classs="link_name" href="#">Analytics</a></li>
+                            <li><a class="link_name" href="calendar.html">calendar</a></li>
                         </ul>
                     </li>
                     <li>
@@ -132,90 +132,95 @@
             <section class="home-section">
                 <div class="home-content">
                     <i class='bx bx-menu'></i>
-                    <span class="dropText">Drop Down Sidebar</span>
                 </div>
+                <div class="allBodyContent">
+                <div class="flex-container">
+                    <div class="header">
+                        <h1>Task Manager</h1>
+                    </div>
+                    <div class="header1">
+                        <h2>Daily Tasks</h2>
+                    </div>
+                </div>
+                    <!--Creating table format for Dialy Tasks-->
+                    <div id="dailyTable">
+                        <table id="table1" class="dailyT">     
+                            <!--first table header for title and days-->
+                            <thead>
+                                <tr class="unit-table">
+                                    <th>Daily Tasks</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                    <th>21</th>
+                                    <th>22</th>
+                                    <th>23</th>
+                                    <th>24</th>
+                                    <th>25</th>
+                                    <th>26</th>
+                                    <th>27</th>
+                                    <th>28</th>
+                                    <th>29</th>
+                                    <th>30</th>
+                                    <th>31</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table1Body">
+                            </tbody>
+                        </table>
+                        <br>
+                        <button type="button"  id= "addRowButton" onClick="addRowFunction()"><i class='bx bx-plus-circle'></i></button> 
+                    </div>
+                    <!--Table for Weekly Habits-->
+                    <h2>Weekly Tasks</h2>
+                        <div id="weeklyTable">
+                            <table id="table2" class="weeklyT">
+                                <thead>
+                                    <tr class="weekly-table">
+                                        <th>Weekly Tasks</th>
+                                        <th>Week 1</th>
+                                        <th>Week 2</th>
+                                        <th>Week 3</th>
+                                        <th>Week 4</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table2Weekly">
+                                </tbody>
+                            </table>
+                            <br>
+                            <button type="button" id="addRowWeekly" onClick="addRowWeekly()"><i class='bx bx-plus-circle'></i></button>
+                        </div>
+                    <!--Circular Progress Tracker for Daily habits-->
+                    <div class="container">
+                        <div class="circular-progress">
+                            <span class="progress-value" onchange="valCheckCount(this)">0%</span>
+                        </div>
+                        <span class="text">Daily Habits</span>
+                        <div class="circular-progress-weekly">
+                            <span class="progress-value-weekly" onchange="checkCountWeekly(this)">0%</span>
+                        </div>
+                        <span class="text">Weekly Tasks</span>
+                    </div>
+                </div>
+            </div>
             </section>
-            <div class="header">
-                <h1>Task Manager</h1>
-            </div>
-            <h2>Daily Tasks</h2>
-            <!--Creating table format for Dialy Tasks-->
-            <div id="dailyTable">
-                <table id="table1" class="dailyT">     
-                    <!--first table header for title and days-->
-                    <thead>
-                        <tr class="unit-table">
-                            <th>Daily Tasks</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            <th>6</th>
-                            <th>7</th>
-                            <th>8</th>
-                            <th>9</th>
-                            <th>10</th>
-                            <th>11</th>
-                            <th>12</th>
-                            <th>13</th>
-                            <th>14</th>
-                            <th>15</th>
-                            <th>16</th>
-                            <th>17</th>
-                            <th>18</th>
-                            <th>19</th>
-                            <th>20</th>
-                            <th>21</th>
-                            <th>22</th>
-                            <th>23</th>
-                            <th>24</th>
-                            <th>25</th>
-                            <th>26</th>
-                            <th>27</th>
-                            <th>28</th>
-                            <th>29</th>
-                            <th>30</th>
-                            <th>31</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table1Body">
-                    </tbody>
-                </table>
-                <br>
-                <button type="button"  id= "addRowButton" onClick="addRowFunction()"><i class='bx bx-plus-circle'></i></button> 
-            </div>
-            <!--Table for Weekly Habits-->
-            <h2>Weekly Tasks</h2>
-                <div id="weeklyTable">
-                    <table id="table2" class="weeklyT">
-                        <thead>
-                            <tr class="weekly-table">
-                                <th>Weekly Tasks</th>
-                                <th>Week 1</th>
-                                <th>Week 2</th>
-                                <th>Week 3</th>
-                                <th>Week 4</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table2Weekly">
-                        </tbody>
-                    </table>
-                    <br>
-                    <button type="button" id="addRowWeekly" onClick="addRowWeekly()"><i class='bx bx-plus-circle'></i></button>
-                </div>
-            <!--Circular Progress Tracker for Daily habits-->
-            <div class="container">
-                <div class="circular-progress">
-                    <span class="progress-value" onchange="valCheckCount(this)">0%</span>
-                </div>
-                <span class="text">Daily Habits</span>
-                <div class="circular-progress-weekly">
-                    <span class="progress-value-weekly" onchange="checkCountWeekly(this)">0%</span>
-                </div>
-                <span class="text">Weekly Tasks</span>
-            </div>
- 
         </body>
     </html>
 </DOCTYPE>
